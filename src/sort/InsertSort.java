@@ -2,18 +2,13 @@ package sort;
 
 import static utils.SortUtils.*;
 
-public class SelectionSort {
+public class InsertSort {
 
     public static void sort(Comparable[] a) {
-        int N = a.length;
-        for (int i = 0; i < N; i++) {
-            int min = i;
-            for (int j = i + 1; j < N; j++) {
-                if (less(a[j], a[min])) {
-                    min = j;
-                }
+        for (int i = 1; i < a.length; i++) {
+            for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
+                exch(a, j, j - 1);
             }
-            exch(a, i, min);
         }
     }
 
