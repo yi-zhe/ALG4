@@ -2,7 +2,7 @@ package sort;
 
 import static utils.SortUtils.*;
 
-public class SelectionSort {
+public class SelectSort {
 
     public static void sort(Comparable[] a) {
         int N = a.length;
